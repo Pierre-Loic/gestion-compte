@@ -1,0 +1,15 @@
+name: dev-deploy
+
+on:
+  push:
+    branches:
+      - deploy
+jobs:
+  site:
+    name: run platform
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: isbang/compose-action@v1.3.2
+        with:
+          compose-file: "./docker-compose.yml"
