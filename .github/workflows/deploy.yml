@@ -13,4 +13,4 @@ jobs:
       - uses: isbang/compose-action@v1.3.2
         with:
           compose-file: "./docker-compose.yml"
-      - run: curl http://localhost:8000
+      - run: curl localhost:8000
